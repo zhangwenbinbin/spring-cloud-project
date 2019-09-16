@@ -3,3 +3,12 @@ spring-cloud-project/.idea/
 spring-cloud-project/oauth-server/.mvn/
 *.cmd
 spring-cloud-project/oauth-server/mvnw
+.idea/
+project-common/.mvn/
+project-service/mvnw
+project-service/.mvn/
+project-common/mvnw
+project-service/consul-provider/.mvn/
+zuul-server/.mvn/
+zuul-server/mvnw
+project-service/consul-provider/mvnw
