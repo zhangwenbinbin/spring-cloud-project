@@ -1,2 +1,10 @@
 server:
   port: 9300
+spring:
+  application:
+    name: consul-provider
+  cloud:
+      host: localhost
+        port: 8500
+        discovery:
+          serviceName: ${spring.application.name}
