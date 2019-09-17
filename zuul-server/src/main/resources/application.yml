@@ -5,7 +5,7 @@ spring:
     name: zuul-server
   cloud:
     consul:
-      host: localhost
-        port: 8500
-        discovery:
-          serviceName: ${spring.application.name}
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}

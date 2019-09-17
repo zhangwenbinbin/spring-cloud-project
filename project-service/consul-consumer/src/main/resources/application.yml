@@ -1,11 +1,10 @@
 server:
-  port: 9200
+  port: 8200
 spring:
   application:
     name: consul-consumer
   cloud:
     consul:
-      host: localhost
-        port: 8500
-        discovery:
-          serviceName: ${spring.application.name}
+      host: 127.0.0.1
+      discovery:
+        service-name: ${spring.application.name}
