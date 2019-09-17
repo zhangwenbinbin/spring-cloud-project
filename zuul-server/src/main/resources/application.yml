@@ -9,3 +9,22 @@ spring:
       port: 8500
       discovery:
         serviceName: ${spring.application.name}
+security:
+  basic:
+    enabled: false
+  oauth2:
+    sso:
+      login-path: /login
+    client:
+      access-token-uri: http://oauth2/uaa/oauth/token
+      user-authorization-uri: /uaa/oauth/authorize
+      client-id: client
+      client-secret: secret
+    resource:
+      jwt:
+        key-value: \
+    -----BEGIN PUBLIC KEY-----\
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjgxpkMG61HKnc7Tqn/smS/7qRPCawEuuJfqX5e1gvKuomiRR+pfBEkZnqqhI2QB0zm5Dcf2sxXSed5mA2K5m3M6lG30bMMUebyQG3WXaX4eQyk6VyBAXA0HMYHMm06atqW6bphKkeSuhBcOEOqzkY/Js/WinVkjT08Xsq/vJKbRyd7baIfnkk+CQFMLWGWi4jMQi2TAl271iM9DrRhX9fGPUye+LCDaZQv9WsadeeA89P4ZrtpADGXjuIt6pTTYl9CcmE6tpSEkbrLb+LV3Jy7KDMNh+w+bSfWTYqIfW20otXU3FTURuG3RLyth7h4ywwfWc/OU2wjMlZ2G7xJbizwIDAQAB
+    -----END PUBLIC KEY-----
+      id: zuul-server
+      service-id: ${PREFIX:}zuul
